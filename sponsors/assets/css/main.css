@@ -2657,7 +2657,7 @@
 		.silver{
 			height: 300px;
 			width: 100%;
-			background-image: -webkit-linear-gradient(top, rgba(255,255,188,0.6), rgba(255,140,0, 0.95)), url("../../images/op_1700*300.jpg");;
+			background-image: -webkit-linear-gradient(top, rgba(242,237,234,0.6), rgba(117,117,117, 0.95)), url("../../images/op_1700*300.jpg");;
 		}
 
 		.silver_wapper{
@@ -2705,7 +2705,7 @@
 		.bronze{
 			height: 600px;
 			width: 100%;
-			background-image: -webkit-linear-gradient(top, rgba(255,255,188,0.6), rgba(255,140,0, 0.95)), url("../../images/op_1700*600.jpg");;
+			background-image: -webkit-linear-gradient(top, rgba(212,170,148,0.6),rgba(187,118,84,0.8), rgba(102,0,0, 0.85)), url("../../images/op_1700*600.jpg");;
 		}
 
 		.bronze .firstRow{
