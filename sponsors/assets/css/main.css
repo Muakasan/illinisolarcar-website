@@ -2512,7 +2512,7 @@
 		background-repeat: repeat-x,						repeat,					no-repeat;
 		background-size: 3200px 460px,					auto,					cover;
 		color: rgba(255, 255, 255, 0.8);
-		padding: 4em 0 20em 0;
+		padding: 2em 0 10em 0;
 		position: relative;
 		text-align: center;
 		height:30%;
@@ -2829,12 +2829,47 @@
 			left: 2%;
 		}
 
+		/* race team */
+		.raceteam{
+			height:1000px;
+			width: 100%;
+			background-color: #a8ffcd;
+		}
+
+		.raceteam .upBlock{
+			height: 60%;
+			width: 100%;
+			display: inline-block;
+		}
+
+		.raceteam .upBlock .leftBlock{
+			height: 100%;
+			width: 42%;
+			background-color: blueviolet;
+			-webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+			clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+			left:0px;
+		}
+
+		.raceteam .upBlock .rightBlock{
+			height: 100%;
+			width: 68%;
+			background-color: blue;
+		}
+
+		.raceteam .upBlock .rightBlock .line1 .single_t{
+
+		
+		}
+
+
+
 
 /* Footer */
 
 	#footer {
 		background-attachment: scroll;
-		background-color: #4eb980;
+		background-color:  #544d55;
 		background-image: url("images/bottom-3200.svg");
 		background-position: top center;
 		background-repeat: repeat-x;
@@ -2846,8 +2881,8 @@
 			and a negative margin (to move everything up a bit).
 		*/
 
-		margin-top: -260px;
-		padding: calc(460px + 6em) 0 10em 0;
+		/* margin-top: -260px; */
+		padding: calc(460px + 5em) 0 1em 0;
 		position: relative;
 		text-align: center;
 	}
