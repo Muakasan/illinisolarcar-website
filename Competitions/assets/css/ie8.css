@@ -1,163 +1,161 @@
 /*
-	Solid State by HTML5 UP
+	Alpha by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Basic */
 
-	body {
-		-ms-behavior: url("assets/js/backgroundsize.min.htc");
-	}
-
-/* Type */
-
-	h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-		border-bottom: solid 2px #ffffff;
-	}
-
-	blockquote {
-		border-left: solid 4px #ffffff;
-	}
-
-	code {
-		border: solid 2px #ffffff;
-	}
-
-	hr {
-		border-bottom: solid 2px #ffffff;
-	}
-
-/* Button */
-
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
+	pre, code {
 		position: relative;
 		-ms-behavior: url("assets/js/ie/PIE.htc");
-		border: solid 2px #ffffff;
 	}
-
-		input[type="submit"].special,
-		input[type="reset"].special,
-		input[type="button"].special,
-		button.special,
-		.button.special {
-			border: 0;
-		}
 
 /* Form */
 
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="tel"],
 	select,
 	textarea {
 		position: relative;
 		-ms-behavior: url("assets/js/ie/PIE.htc");
-		background: transparent;
-		border: solid 2px #ffffff;
+		line-height: 3em;
 	}
 
-/* Table */
-
-	table tbody tr {
-		border: solid 1px #ffffff;
-		border-left: 0;
-		border-right: 0;
+	input[type="checkbox"],
+	input[type="radio"] {
+		opacity: 1;
+		z-index: auto;
 	}
 
-	table.alt tbody tr td {
-		border: solid 1px #ffffff;
-		border-left-width: 0;
-		border-top-width: 0;
-	}
-
-		table.alt tbody tr td:first-child {
-			border-left-width: 1px;
+		input[type="checkbox"] + label:before,
+		input[type="radio"] + label:before {
+			display: none;
 		}
 
-	table.alt tbody tr:first-child td {
-		border-top-width: 1px;
-	}
+/* Button */
 
-	table.alt thead {
-		border-bottom: 0;
-	}
-
-	table.alt tfoot {
-		border-top: 0;
-	}
-
-/* Features */
-
-	.features article {
-		-ms-behavior: url("assets/js/ie/PIE.htc");
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
 		position: relative;
-		width: 44%;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-		.features article .image {
-			margin-top: 0;
-			margin-left: 0;
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		input[type="button"].alt,
+		.button.alt {
+			border: solid 2px #e5e5e5;
+		}
+
+/* Box */
+
+	.box {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+		.box .image.featured {
+			margin: 2em 0;
 			width: 100%;
 		}
 
-/* Menu */
+/* Icon */
 
-	#menu {
-		background: #2e3141;
+	.icon.major {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
-		#menu h2 {
-			border-bottom: solid 2px #ffffff;
+/* Image */
+
+	.image {
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
+	}
+
+		.image img {
+			position: relative;
+			-ms-behavior: url("assets/js/ie/PIE.htc");
 		}
 
 /* Header */
 
-	#header {
-		background-color: #353849;
+	#header nav > ul > li a {
+		color: #fff;
+		display: inline-block;
+		text-decoration: none;
+		border: 0;
 	}
 
-/* Wrapper */
+		#header nav > ul > li a.icon:before {
+			color: #fff;
+			margin-right: 0.5em;
+		}
 
-	.wrapper {
-		margin: 0;
+	#header.alt {
+		color: #fff;
 	}
 
-		.wrapper:before, .wrapper:after {
-			display: none;
+		#header.alt nav > ul > li a:not(.button).icon:before {
+			color: rgba(255, 255, 255, 0.75);
 		}
 
-		.wrapper.spotlight .image {
-			-ms-behavior: url("assets/js/ie/PIE.htc");
+		#header.alt nav > ul > li.active a:not(.button) {
+			background-color: rgba(255, 255, 255, 0.2);
 		}
 
-			.wrapper.spotlight .image img {
-				position: relative;
-				-ms-behavior: url("assets/js/ie/PIE.htc");
+	.dropotron {
+		border: solid 1px #e5e5e5;
+	}
+
+		.dropotron.level-0 {
+			margin-top: 0;
+		}
+
+			.dropotron.level-0:before {
+				display: none;
 			}
 
 /* Banner */
 
-	#banner .logo .icon {
-		border: solid 2px #ffffff;
-		-ms-behavior: url("assets/js/ie/PIE.htc");
+	#banner {
+		background-attachment: scroll;
+		background-image: url("../../images/banner.jpg");
+		background-position: auto;
+		background-repeat: no-repeat;
+		background-size: cover;
+		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
 	}
 
-	#banner h2 {
-		border-bottom: solid 2px #ffffff;
-	}
-
-/* Footer */
-
-	#footer .inner .copyright {
-		border-top: solid 2px #ffffff;
-	}
-
-		#footer .inner .copyright li {
-			border-left: solid 2px #ffffff;
+		#banner input[type="submit"],
+		#banner input[type="reset"],
+		#banner input[type="button"],
+		#banner .button {
+			border: solid 2px #fff;
 		}
+
+/* Main */
+
+	#main {
+		position: relative;
+		z-index: 1;
+	}
+
+/* CTA */
+
+	#cta input[type="text"],
+	#cta input[type="password"],
+	#cta input[type="email"],
+	#cta select,
+	#cta textarea {
+		background: #e89980;
+		border: solid 2px #fff;
+	}
+
+	#cta .formerize-placeholder {
+		color: #fff !important;
+	}

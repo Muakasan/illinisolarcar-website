@@ -4,51 +4,16 @@
 @import 'libs/skel';
 
 /*
-	Solid State by HTML5 UP
+	Alpha by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Basic */
 
-	body {
-		-ms-behavior: url('assets/js/backgroundsize.min.htc');
-	}
-
-/* Type */
-
-	h1, h2, h3, h4, h5, h6 {
-		&.major {
-			border-bottom: solid 2px _palette(fg-bold);
-		}
-	}
-
-	blockquote {
-		border-left: solid 4px _palette(fg-bold);
-	}
-
-	code {
-		border: solid 2px _palette(fg-bold);
-	}
-
-	hr {
-		border-bottom: solid 2px _palette(fg-bold);
-	}
-
-/* Button */
-
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
+	pre, code {
 		position: relative;
 		-ms-behavior: url('assets/js/ie/PIE.htc');
-		border: solid 2px _palette(fg-bold);
-
-		&.special {
-			border: 0;
-		}
 	}
 
 /* Form */
@@ -56,106 +21,130 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="tel"],
 	select,
 	textarea {
 		position: relative;
 		-ms-behavior: url('assets/js/ie/PIE.htc');
-		background: transparent;
-		border: solid 2px _palette(fg-bold);
+		line-height: 3em;
 	}
 
-/* Table */
+	input[type="checkbox"],
+	input[type="radio"], {
+		opacity: 1;
+		z-index: auto;
 
-	table {
-		tbody {
-			tr {
-				border: solid 1px _palette(fg-bold);
-				border-left: 0;
-				border-right: 0;
+		& + label {
+			&:before {
+				display: none;
 			}
 		}
+	}
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 
 		&.alt {
-			tbody {
-				tr {
-					td {
-						border: solid 1px _palette(fg-bold);
-						border-left-width: 0;
-						border-top-width: 0;
-
-						&:first-child {
-							border-left-width: 1px;
-						}
-					}
-
-					&:first-child {
-						td {
-							border-top-width: 1px;
-						}
-					}
-				}
-			}
-
-			thead {
-				border-bottom: 0;
-			}
-
-			tfoot {
-				border-top: 0;
-			}
+			border: solid 2px _palette(border);
 		}
 	}
 
-/* Features */
+/* Box */
 
-	.features {
-		article {
-			-ms-behavior: url('assets/js/ie/PIE.htc');
-			position: relative;
-			width: 44%;
+	.box {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 
-			.image {
-				margin-top: 0;
-				margin-left: 0;
+		.image {
+			&.featured {
+				margin: 2em 0;
 				width: 100%;
 			}
 		}
 	}
 
-/* Menu */
+/* Icon */
 
-	#menu {
-		background: _palette(bg);
+	.icon {
+		&.major {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+		}
+	}
 
-		h2 {
-			border-bottom: solid 2px _palette(fg-bold);
+/* Image */
+
+	.image {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+
+		img {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
 		}
 	}
 
 /* Header */
 
 	#header {
-		background-color: desaturate(lighten(_palette(bg), 3), 1.5);
-	}
+		nav {
+			> ul {
+				> li {
+					a {
+						color: #fff;
+						display: inline-block;
+						text-decoration: none;
+						border: 0;
 
-/* Wrapper */
-
-	.wrapper {
-		&:before, &:after {
-			display: none;
+						&.icon {
+							&:before {
+								color: #fff;
+								margin-right: 0.5em;
+							}
+						}
+					}
+				}
+			}
 		}
 
-		margin: 0;
+		&.alt {
+			color: #fff;
 
-		&.spotlight {
-			.image {
-				-ms-behavior: url('assets/js/ie/PIE.htc');
+			nav {
+				> ul {
+					> li {
+						a:not(.button) {
+							&.icon {
+								&:before {
+									color: rgba(255,255,255,0.75);
+								}
+							}
+						}
 
-				img {
-					position: relative;
-					-ms-behavior: url('assets/js/ie/PIE.htc');
+						&.active {
+							a:not(.button) {
+								background-color: rgba(255,255,255,0.2);
+							}
+						}
+					}
 				}
+			}
+		}
+	}
+
+	.dropotron {
+		border: solid 1px _palette(border);
+
+		&.level-0 {
+			margin-top: 0;
+
+			&:before {
+				display: none;
 			}
 		}
 	}
@@ -163,28 +152,41 @@
 /* Banner */
 
 	#banner {
-		.logo {
-			.icon {
-				border: solid 2px _palette(fg-bold);
-				-ms-behavior: url('assets/js/ie/PIE.htc');
-			}
-		}
+		background-attachment:	scroll;
+		background-image:		url('../../images/banner.jpg');
+		background-position:	auto;
+		background-repeat:		no-repeat;
+		background-size:		cover;
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
 
-		h2 {
-			border-bottom: solid 2px _palette(fg-bold);
+		input[type="submit"],
+		input[type="reset"],
+		input[type="button"],
+		.button {
+			border: solid 2px #fff;
 		}
 	}
 
-/* Footer */
+/* Main */
 
-	#footer {
-		.inner {
-			.copyright {
-				border-top: solid 2px _palette(fg-bold);
+	#main {
+		position: relative;
+		z-index: 1;
+	}
 
-				li {
-					border-left: solid 2px _palette(fg-bold);
-				}
-			}
+/* CTA */
+
+	#cta {
+		input[type="text"],
+		input[type="password"],
+		input[type="email"],
+		select,
+		textarea {
+			background: _palette(accent2, bg);
+			border: solid 2px #fff;
+		}
+
+		.formerize-placeholder {
+			color: #fff !important;
 		}
 	}

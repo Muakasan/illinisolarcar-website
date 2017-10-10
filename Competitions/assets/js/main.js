@@ -1,19 +1,18 @@
 /*
-	Solid State by HTML5 UP
+	Alpha by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function($) {
 
-	"use strict";
-
 	skel.breakpoints({
-		xlarge:	'(max-width: 1680px)',
-		large:	'(max-width: 1280px)',
-		medium:	'(max-width: 980px)',
-		small:	'(max-width: 736px)',
-		xsmall:	'(max-width: 480px)'
+		wide: '(max-width: 1680px)',
+		normal: '(max-width: 1280px)',
+		narrow: '(max-width: 980px)',
+		narrower: '(max-width: 840px)',
+		mobile: '(max-width: 736px)',
+		mobilep: '(max-width: 480px)'
 	});
 
 	$(function() {
@@ -23,144 +22,141 @@
 			$header = $('#header'),
 			$banner = $('#banner');
 
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
-
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 100);
-			});
-
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
-		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
+		// Prioritize "important" elements on narrower.
+			skel.on('+narrower -narrower', function() {
 				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
+					'.important\\28 narrower\\29',
+					skel.breakpoint('narrower').active
 				);
 			});
 
+		// Dropdowns.
+			$('#nav > ul').dropotron({
+				alignment: 'right'
+			});
+
+		// Off-Canvas Navigation.
+
+			// Navigation Button.
+				$(
+					'<div id="navButton">' +
+						'<a href="#navPanel" class="toggle"></a>' +
+					'</div>'
+				)
+					.appendTo($body);
+
+			// Navigation Panel.
+				$(
+					'<div id="navPanel">' +
+						'<nav>' +
+							$('#nav').navList() +
+						'</nav>' +
+					'</div>'
+				)
+					.appendTo($body)
+					.panel({
+						delay: 500,
+						hideOnClick: true,
+						hideOnSwipe: true,
+						resetScroll: true,
+						resetForms: true,
+						side: 'left',
+						target: $body,
+						visibleClass: 'navPanel-visible'
+					});
+
+			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
+				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
+					$('#navButton, #navPanel, #page-wrapper')
+						.css('transition', 'none');
+
 		// Header.
-			if (skel.vars.IEVersion < 9)
-				$header.removeClass('alt');
+		// If the header is using "alt" styling and #banner is present, use scrollwatch
+		// to revert it back to normal styling once the user scrolls past the banner.
+		// Note: This is disabled on mobile devices.
+			if (!skel.vars.mobile
+			&&	$header.hasClass('alt')
+			&&	$banner.length > 0) {
 
-			if ($banner.length > 0
-			&&	$header.hasClass('alt')) {
+				$window.on('load', function() {
 
-				$window.on('resize', function() { $window.trigger('scroll'); });
+					$banner.scrollwatch({
+						delay:		0,
+						range:		0.5,
+						anchor:		'top',
+						on:			function() { $header.addClass('alt reveal'); },
+						off:		function() { $header.removeClass('alt'); }
+					});
 
-				$banner.scrollex({
-					bottom:		$header.outerHeight(),
-					terminate:	function() { $header.removeClass('alt'); },
-					enter:		function() { $header.addClass('alt'); },
-					leave:		function() { $header.removeClass('alt'); }
 				});
 
 			}
 
-		// Menu.
-			var $menu = $('#menu');
-
-			$menu._locked = false;
-
-			$menu._lock = function() {
-
-				if ($menu._locked)
-					return false;
-
-				$menu._locked = true;
-
-				window.setTimeout(function() {
-					$menu._locked = false;
-				}, 350);
-
-				return true;
-
-			};
-
-			$menu._show = function() {
-
-				if ($menu._lock())
-					$body.addClass('is-menu-visible');
-
-			};
-
-			$menu._hide = function() {
-
-				if ($menu._lock())
-					$body.removeClass('is-menu-visible');
-
-			};
-
-			$menu._toggle = function() {
-
-				if ($menu._lock())
-					$body.toggleClass('is-menu-visible');
-
-			};
-
-			$menu
-				.appendTo($body)
-				.on('click', function(event) {
-
-					event.stopPropagation();
-
-					// Hide.
-						$menu._hide();
-
-				})
-				.find('.inner')
-					.on('click', '.close', function(event) {
-
-						event.preventDefault();
-						event.stopPropagation();
-						event.stopImmediatePropagation();
-
-						// Hide.
-							$menu._hide();
-
-					})
-					.on('click', function(event) {
-						event.stopPropagation();
-					})
-					.on('click', 'a', function(event) {
-
-						var href = $(this).attr('href');
-
-						event.preventDefault();
-						event.stopPropagation();
-
-						// Hide.
-							$menu._hide();
-
-						// Redirect.
-							window.setTimeout(function() {
-								window.location.href = href;
-							}, 350);
-
-					});
-
-			$body
-				.on('click', 'a[href="#menu"]', function(event) {
-
-					event.stopPropagation();
-					event.preventDefault();
-
-					// Toggle.
-						$menu._toggle();
-
-				})
-				.on('keydown', function(event) {
-
-					// Hide on escape.
-						if (event.keyCode == 27)
-							$menu._hide();
-
-				});
-
 	});
 
 })(jQuery);
+
+
+var options = {
+	area: { height: null },
+	container: "demo",
+	data: {
+		preloaded: {
+			nodes: [
+				{ id: "Darwin", coordinates: [130.8456, -12.4634] }, // long, lat
+				{ id: "Daly Waters", coordinates: [133.3692, -16.2533] },
+				{ id: "Tennant Creek", coordinates: [134.1900, -19.6484] }
+			],
+			links: [
+				{ from: "Darwin", to: "Daly Waters", drivingTime: "13 hours 3 mins" },
+				{ from: "Daly Waters", to: "Tennant Creek", drivingTime: "3 hours 3 mins" }
+
+			]
+		}
+	},
+	events: {
+		onClick: function (event, args) {
+			if (args.clickNode) alert("You clicked on " + args.clickNode.data.id + ".");
+			if (args.clickLink) alert("You clicked on a link.");
+		}
+	},
+	layers: [
+		{
+			name: "Points",
+			type: "items",
+			style: {
+				nodeStyleFunction: function (node) {
+					node.label = node.data.id;
+				},
+				linkStyleFunction: function (link) {
+					link.label = link.data.drivingTime;
+				},
+				node: {
+					fillColor: "#09c",
+					lineColor: "#07a",
+					lineWidth: 2
+				},
+				nodeLabel: {
+					backgroundStyle: { fillColor: "rgba(0,0,0, 0.6)" },
+					textStyle: { fillColor: "white" }
+				},
+				linkLabel: {
+					backgroundStyle: { fillColor: "rgba(232, 74, 39, 0.6)" },
+					textStyle: { fillColor: "white" }
+				}
+			}
+		}
+	],
+	navigation: {
+		initialLat: -15.2744,
+		initialLng: 133.7751,
+		initialZoom: 5,
+		minZoom: 4
+	},
+	advanced: { pointer: { noClickOnDoubleClick: false } }
+};
+
+chart = new GeoChart(options);
