@@ -106,13 +106,29 @@ var options = {
 	data: {
 		preloaded: {
 			nodes: [
-				{ id: "Darwin", coordinates: [130.8456, -12.4634] }, // long, lat
+				{ id: "Katherine", coordinates: [132.2715, -14.4521] }, 
+				{ id: "Darwin", coordinates: [130.8456, -12.4634] },// long, lat
 				{ id: "Daly Waters", coordinates: [133.3692, -16.2533] },
-				{ id: "Tennant Creek", coordinates: [134.1900, -19.6484] }
+				{ id: "Tennant Creek", coordinates: [134.1900, -19.6484] },
+				{ id: "Barrow Creek", coordinates: [133.9756, -21.3799] },
+				{ id: "Alice Springs", coordinates: [133.8807, -23.6980] },
+				{ id: "Kulgera", coordinates: [133.1760, -25.4959] },
+				{ id: "Coober Pedy", coordinates: [134.7533, -29.0139] },
+				{ id: "Glendambo", coordinates: [135.7593, -30.9678] },
+				{ id: "Port Augusta", coordinates: [137.7894, -32.4952] },
+				{ id: "Adelaide", coordinates: [138.6007, -34.9285] }
 			],
 			links: [
+				{ from: "Katherine", to: "Darwin", drivingTime: "13 hours 3 mins" },
 				{ from: "Darwin", to: "Daly Waters", drivingTime: "13 hours 3 mins" },
-				{ from: "Daly Waters", to: "Tennant Creek", drivingTime: "3 hours 3 mins" }
+				{ from: "Daly Waters", to: "Tennant Creek", drivingTime: "3 hours 3 mins" },
+				{ from: "Tennant Creek", to: "Barrow Creek", drivingTime: "13 hours 3 mins" },
+				{ from: "Barrow Creek", to: "Alice Springs", drivingTime: "13 hours 3 mins" },
+				{ from: "Alice Springs", to: "Kulgera", drivingTime: "13 hours 3 mins" },
+				{ from: "Kulgera", to: "Coober Pedy", drivingTime: "13 hours 3 mins" },
+				{ from: "Coober Pedy", to: "Glendambo", drivingTime: "13 hours 3 mins" },
+				{ from: "Glendambo", to: "Port Augusta", drivingTime: "13 hours 3 mins" },
+				{ from: "Port Augusta", to: "Adelaide", drivingTime: "13 hours 3 mins" },
 
 			]
 		}
@@ -151,10 +167,10 @@ var options = {
 		}
 	],
 	navigation: {
-		initialLat: -15.2744,
-		initialLng: 133.7751,
-		initialZoom: 5,
-		minZoom: 4
+		initialLat: -20,
+		initialLng: 135.7751,
+		initialZoom: 4.5,
+		minZoom: 3
 	},
 	advanced: { pointer: { noClickOnDoubleClick: false } }
 };
