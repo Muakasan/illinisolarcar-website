@@ -25,7 +25,7 @@
 
 	section #four{
 		height: 60%;
-		
+
 	}
 
 	#navi img{
@@ -141,11 +141,11 @@
 		100% {
 			opacity: 1;
 		}
-	}  
-	  
+	}
 
-	
-	
+
+
+
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -3499,10 +3499,10 @@
 		}
 
 		#banner:after {
-			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("../../images/team_scaled.png");;
-			background-image: -webkit-linear-gradient(top, rgba(68, 140, 255, 0.65), rgba(23, 24, 32, 0.95)), url("../../images/team_scaled.png");;
+			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("../../images/grainger.jpg");;
+			background-image: -webkit-linear-gradient(top, rgba(68, 140, 255, 0.65), rgba(23, 24, 32, 0.95)), url("../../images/grainger.jpg");;
 			/* background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("../../images/team_scaled.png");; */
-			background-image: linear-gradient(top, rgba(223, 24, 32, 0.55), rgba(23, 24, 32, 0.95)), url("../../images/team_scaled.png");;
+			background-image: linear-gradient(top, rgba(223, 24, 32, 0.55), rgba(23, 24, 32, 0.95)), url("../../images/grainger.jpg");;
 			background-position:center center;
 			background-repeat: no-repeat;
 			background-size: 100%;
@@ -3534,7 +3534,7 @@
 					line-height: 1.5em;
 					/* font-size: 2.5em;
 					margin: 0; */
-					
+
 					/* font-family: 'Orbitron', sans-serif; */
 					font-family:'Audiowide', cursive;
 					font-size: 60px !important;
@@ -3581,7 +3581,7 @@
 					-ms-filter: blur(0);
 					filter: blur(0);
 					opacity: 1;
-					font-family: 'Orbitron', sans-serif; 
+					font-family: 'Orbitron', sans-serif;
 					/* font-family: Raleway, Helvetica, sans-serif; */
 					font-size: 1em;
 					font-weight: 200;
@@ -4395,4 +4395,3 @@
 	#cssmenu > ul > li.has-sub > a:hover:before {
 	  border-top: 5px solid #ffffff;
 	}
-	
