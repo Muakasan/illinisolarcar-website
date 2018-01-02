@@ -50,14 +50,14 @@
 	}
 
 	h1{
-		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-		font-size: 250%;
+		font-family: 'Bank Gothic';
+		font-size: 270%;
 		font-weight: bold;
 	}
 
 	h2{
 		font-family: 'Times New Roman', Times, serif;
-		font-size: 210%;
+		font-size: 200%;
 		font-weight: bold;
 		color: rgb(24,67,135);
 	}
@@ -68,8 +68,8 @@
 	}
 
 	h4{
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		font-size: 180%;
+		font-family:"Comic Sans MS", cursive, sans-serif;
+		font-size: 150%;
 		margin: 7px;
 	}
 
@@ -206,7 +206,7 @@
 			border-top-left-radius: 15px;
 			border-bottom-left-radius: 15px;
 			height:100%;
-			background-color: rgba(230,230,230, 0.6);
+			background-color: rgba(230,230,230, 0.75);
 		}
 
 
@@ -222,32 +222,24 @@
 
 		.golden_logo{
 			position: relative;
-			top:35%;
+			top:23%;
 			width: 100%;
 		}
 
-
-		.golden_logo_2nd{
-			position: relative;
-			width: 95%;
-			display: block;
-			margin: auto;
-			top: 50%;
-		}
 
 		/* silver */
 
 		.silver{
-			padding-top: 2em;
+			padding-top: 3em;
 			padding-left: 5em;
 			padding-right: 5em;
-			height: 400px;
+			height: 500px;
 			width: 100%;
-			background-image: -webkit-linear-gradient(top, rgba(242,237,234,0.6), rgba(117,117,117, 0.95)), url("../../images/silver_try.jpg");;
+			background-image: -webkit-linear-gradient(top, rgba(242,237,234,0.6), rgba(117,117,117, 0.95)), url("../../images/silver_try.png");;
 		}
 
 		.silver .single{
-			height: 150px;
+			height: 170px;
 		}
 
 		.silver .logo-img{
@@ -256,6 +248,7 @@
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
 			height:100%;
+			max-width: 100%;
 			background-color: rgba(230,230,230, 0.9);
 		}
 
@@ -272,13 +265,13 @@
 
 		.silver_logo{
 			height: 95%;
-
+			max-width: 95%;
 		}
 
 		/* bronze */
 		.bronze{
 			padding-top: 2em;
-			padding-left: 5em;
+			padding-left: 10em;
 			padding-right: 5em;
 			height: 600px;
 			width: 100%;
@@ -299,19 +292,43 @@
 		}
 
 		.bronze .single{
-			height: 150px;
+			height: 160px;
 		}
 		/* partner */
 		.partner{
 			padding-top: 2em;
 			padding-left: 5em;
 			padding-right: 5em;
-			height: 600px;
+			height: 1500px;
 			width: 100%;
-			background-image: -webkit-linear-gradient(top, rgba(255,246,229,0.6), rgba(225,165,0, 0.85)), url("../../images/partner.png");;
+			background-image: -webkit-linear-gradient( rgba(255,204,153, 0.65),rgba(255,246,229,0.6),rgba(117,117,117, 0.95));
 		}
 
+
 		.partner .single{
+			height: 80px;
+			margin-top: 2em;
+			margin-bottom: 2em;
+
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+		.partner .bronze-logo{
+			max-height:100%;
+			width: 80%;
+		}
+		/* supporters */
+		.supporters{
+			padding-top: 2em;
+			padding-left: 5em;
+			padding-right: 5em;
+			height: 400px;
+			width: 100%;
+			background-image: -webkit-linear-gradient(top, rgba(255,204,153,0.2), rgba(204,226,255, 0.65));
+		}
+
+		.supporters .single{
 			height: 150px;
 		}
 
@@ -320,32 +337,16 @@
 			display: inline-block;
 			text-align: center;
 			border-radius: 15px;
-			height:100%;
-			background-color: rgba(230,230,230, 0.6);
+			height:90%;
+			width:90%;
+			/* background-color: rgba(230,230,230, 0.6); */
+		}
+		.supporters.bronze-logo{
+			height: 60%;
+			max-width: 90%;
 		}
 
-		.partner_wrapper{
-			height: 200px;
-			position: relative;
-			left: 1%;
-			top: 40%;
-		}
 
-		.single_p{
-			height: 95%;
-			width: 16%;
-			display: inline-block;
-			border-radius: 25px;
-			background-color: rgba(219,219,219, 0.8);
-		}
-
-		.partner_logo{
-			position: relative;
-			width: 95%;
-			display: block;
-			margin: auto;
-			top: 40%;
-		}
 		/* supporter */
 		.rest{
 			padding-top: 2em;
@@ -353,7 +354,7 @@
 			padding-right: 5em;
 			height: 500px;
 			width: 100%;
-			background-image: -webkit-linear-gradient(top, rgba(242,237,234,0.6), rgba(117,117,117, 0.95)), url("../../images/silver_try.jpg");;
+			background-image: -webkit-linear-gradient(top, rgba(242,237,234,0.6), rgba(117,117,117, 0.95)), url("../image/bottom-3200.svg");;
 		}
 
 
